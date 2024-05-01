@@ -1,16 +1,15 @@
 #root {
   
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 .colorFuente{
-  color: rgb(206, 146, 33);
+  color: rgb(0, 0, 0);
 }
 .div{
   text-align: center;
 }
 .nav a:hover{
-  color: black;
+  color: rgb(255, 252, 252);
   text-decoration: none;
 }

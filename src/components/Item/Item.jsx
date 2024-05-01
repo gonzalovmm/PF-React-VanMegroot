@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import React from 'react'
 const Item= ({id, nombre, imagen, categoria, precio,stock})=> {
     return (
         <article className="card bg-emerald-800 shadow-sm" style={{width: '18rem'}}>
@@ -18,8 +19,12 @@ const Item= ({id, nombre, imagen, categoria, precio,stock})=> {
                     Stock: {stock}
                 </p>
             </section>
-            <footer className="d-grid gap-2 p-2">
-                <Link to={`/item/${id}`} className="btn btn-warning shadow-md border-6">Ver Detalles</Link>
+            <footer className="p-2">
+                <div className=" bg-emerald-600 hover:scale-105 rounded-lg shadow-md border-6 ">
+                <Link to={`/item/${id}`} >Ver Detalles</Link>
+                </div>
+                
+                
             </footer>
         </article>
       )

@@ -17,12 +17,12 @@ const ItemCount = ({stock, initial, onAdd}) => {
     return(
       <div>
           <div className="flex justify-between align-center p-3">
-              <Button type="bg-esmerald-800 hover:bg-esmerald-500" onClick={decrement} shape="circle">-</Button>
+              <Button  onClick={decrement} shape="circle">-</Button>
               <h4>{quantity}</h4>
-              <Button type="bg-esmerald-800 hover:bg-esmerald-500" onClick={increment} shape="circle">+</Button>
+              <Button  onClick={increment} shape="circle">+</Button>
           </div>
           <div>
-              <Button type=" bg-esmerald-800 hover:bg-esmerald-500" onClick={() => onAdd(quantity)} disabled={!stock}>Agregar al carrito</Button>
+              <Button  onClick={() => onAdd(quantity)} disabled={!stock}>Agregar al carrito</Button>
           </div>
       </div>
   )
