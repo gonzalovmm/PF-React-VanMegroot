@@ -33,10 +33,10 @@ Esta aplicación le brinda a los usuarios la experiencia de poder organizar sus 
 ## Uso de la App
 
 ¡Organiza tus viandas en pocos pasos!
--Navega: Menú principal (Inicio, Principales, Postres, Veganos, Carrito, Perfil).
--Selecciona: Categorías, filtros, detalles de productos.
--Carrito: Revisa, modifica, elimina, calcula total.
--Ordenar: Ingresar datos, revisar pedidos, confirmar
+- **Navega**: Menú principal (Inicio, Principales, Postres, Veganos, Carrito, Perfil).
+- **Selecciona**: Categorías, filtros, detalles de productos.
+- **Carrito**: Revisa, modifica, elimina, calcula total.
+- **Ordenar**: Ingresar datos, revisar pedidos, confirmar
 
 ## Características principales
 
