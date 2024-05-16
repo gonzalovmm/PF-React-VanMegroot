@@ -1,4 +1,4 @@
-#Proyecto Final de React de CoderHouse
+# Proyecto Final de React de CoderHouse
 Esta aplicación le brinda a los usuarios la experiencia de poder organizar sus comidas semanalmente, seleccionando una variedad de productos y poder ordenarlos con anticipación. Soy Gonzalo Van Megroot y les presento mi proyecto MDZ viandas
 ## Tabla de Contenidos
 
