@@ -1,7 +1,7 @@
 import { NavLink, Link } from "react-router-dom"
 import CartWidget from "./Carwidget/CartWidget"
 const NavBar = () => {
-    return( <div className="col flex justify-between text-white bg-gray">
+    return( <div className="col flex justify-between">
     <nav className="nav text-center items-center grow ">
       
       
