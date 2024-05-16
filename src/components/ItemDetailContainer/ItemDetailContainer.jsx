@@ -1,27 +1,39 @@
 import { useState, useEffect } from 'react'
-import { getProductosPorId } from '../../asyncMock'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
+import { getDoc, doc } from 'firebase/firestore'
+import { db } from '../../firebaseConfig'
 
 const ItemDetailContainer = () => {
-    const [producto, setProducto] = useState(null)
+    const [productos, setProducto] = useState(null)
+    const [loading, setLoading] = useState(true)
 
     const {itemId}=useParams()
     useEffect(() => {
-        getProductosPorId(itemId)
-            .then((data) => {
-                setProducto(data)
+        setLoading(true)
+
+        const docRef = doc(db, 'productos', itemId)
+
+        getDoc(docRef)
+            .then((response) => {
+                const data = response.data()
+                const producto = {id: response.id, ...data}
+                setProducto(producto)
             })
-            .catch((error) => {
-                console.error(error)
+            .catch(error => {
+                console.log(error)
+            })
+            .finally(() => {
+                setLoading(false)
             })
     }, [itemId])
+    if (loading) {
+        return <h1>Cargando...</h1>
+    }
     return (
-        <div className="flex justify-center">
-             <ItemDetail {...producto}/>
-             
-        </div>
+        <ItemDetail {...productos}/>
+
     )
-}
+    }
 
 export default ItemDetailContainer

@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom'
 import React from 'react'
-const Item= ({id, nombre, imagen, categoria, precio,stock})=> {
+const Item= ({id, nombre, imagenUrl, precio,stock})=> {
     return (
-        <article className="card bg-emerald-800 shadow-sm" style={{width: '18rem'}}>
+        <article className="card bg-emerald-800 shadow-sm text-white" style={{width: '18rem'}}>
             <header>
-                <h2 className="font-bold p-2">
+                <h2 className="font-semibold p-2">
                     {nombre}
                 </h2>
             </header>
             <picture >
-                <img src={imagen} alt={nombre} className="card-img-top"/>
+                <img src={imagenUrl} alt={nombre} className="card-img-top"/>
             </picture>
             <section>
                 <p>

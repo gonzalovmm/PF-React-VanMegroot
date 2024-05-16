@@ -1,13 +1,19 @@
 import { ShoppingCart } from "lucide-react"
+import { Link } from "react-router-dom"
+import { CartContext } from "../../../context/CartContext"
+import { useContext } from "react"
+import { Badge } from "antd"
 
 function CartWidget() {
+  const {totalQuantity} = useContext(CartContext)
   return (
-    <div className="flex items-center ">
-    <a href="#" className="btn position-relative">
-      <ShoppingCart width={26} />
-      <span className="position-absolute top-0 start-100  translate-middle badge rounded-pill bg-danger">0</span>
-    
-    </a>
+    <div className=" hidden md:flex md:gap-4 hover:scale-110 ">
+      <Badge className="text-white" size="small" count = {totalQuantity}>
+        <Link to="/cart">
+        <ShoppingCart />
+      
+      </Link>
+      </Badge>
     
     </div>
   )
